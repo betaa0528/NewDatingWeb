@@ -41,8 +41,14 @@ let img1 = "<%=myInfo[1]%>";
 <%@ include file="header.jsp" %>
 
 <section>
-		<div class="side side1">
+		<div class="side_box">
+			<div class="side side_small left">
+			</div>
+			<div class="side side1">
 			현재 날짜는?
+			</div>
+			<div class="side side_small left">
+			</div>
 		</div>
 	
 		<div id="chat_container">
@@ -69,8 +75,6 @@ let img1 = "<%=myInfo[1]%>";
 			
 		</div>
 		<div id="chat_footer">
-			<input type="text" id="chat_input">
-			<input type="button" value="전송" id="chat_btn" onclick="send()">
 		</div>
 	</div>
 
@@ -101,9 +105,16 @@ let img1 = "<%=myInfo[1]%>";
 		
 	</div>
 	
+		<div class="side_box">
+	<div class="side side_small right">
+			</div>
 	<div class="side side2">
 			현재 시간은?
 		</div>
+		<div class="side side_small right">
+			</div>
+	</div>
+	
 	
 	
 	
