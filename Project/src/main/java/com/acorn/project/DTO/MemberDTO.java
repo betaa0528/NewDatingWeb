@@ -20,15 +20,21 @@ public class MemberDTO {
 	String love_type;
 	String like_cnt;
 	String game_point;
+	int like_type1;
+	int like_type2;
+	int like_type3;
+	int like_type4;
 	
 	public MemberDTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	
+	
 	public MemberDTO(String member_id, String mname, String email, String mpassword, int age, String gender,
 			String phone, String introduce, String grade, String mbti, String religion, String job, String image,
-			String height, String weight, String love_type, String like_cnt, String game_point) {
+			String height, String weight, String love_type, String like_cnt, String game_point, int like_type1,
+			int like_type2, int like_type3, int like_type4) {
 		super();
 		this.member_id = member_id;
 		this.mname = mname;
@@ -48,7 +54,53 @@ public class MemberDTO {
 		this.love_type = love_type;
 		this.like_cnt = like_cnt;
 		this.game_point = game_point;
+		this.like_type1 = like_type1;
+		this.like_type2 = like_type2;
+		this.like_type3 = like_type3;
+		this.like_type4 = like_type4;
 	}
+
+
+	public int getLike_type1() {
+		return like_type1;
+	}
+
+
+	public void setLike_type1(int like_type1) {
+		this.like_type1 = like_type1;
+	}
+
+
+	public int getLike_type2() {
+		return like_type2;
+	}
+
+
+	public void setLike_type2(int like_type2) {
+		this.like_type2 = like_type2;
+	}
+
+
+	public int getLike_type3() {
+		return like_type3;
+	}
+
+
+	public void setLike_type3(int like_type3) {
+		this.like_type3 = like_type3;
+	}
+
+
+	public int getLike_type4() {
+		return like_type4;
+	}
+
+
+	public void setLike_type4(int like_type4) {
+		this.like_type4 = like_type4;
+	}
+
+
 	public String getMember_id() {
 		return member_id;
 	}
@@ -157,12 +209,16 @@ public class MemberDTO {
 	public void setGame_point(String game_point) {
 		this.game_point = game_point;
 	}
+
+
 	@Override
 	public String toString() {
-		return "UpdateDTO [member_id=" + member_id + ", mname=" + mname + ", email=" + email + ", mpassword="
+		return "MemberDTO [member_id=" + member_id + ", mname=" + mname + ", email=" + email + ", mpassword="
 				+ mpassword + ", age=" + age + ", gender=" + gender + ", phone=" + phone + ", introduce=" + introduce
 				+ ", grade=" + grade + ", mbti=" + mbti + ", religion=" + religion + ", job=" + job + ", image=" + image
 				+ ", height=" + height + ", weight=" + weight + ", love_type=" + love_type + ", like_cnt=" + like_cnt
-				+ ", game_point=" + game_point + "]";
+				+ ", game_point=" + game_point + ", like_type1=" + like_type1 + ", like_type2=" + like_type2
+				+ ", like_type3=" + like_type3 + ", like_type4=" + like_type4 + "]";
 	}
+	
 }

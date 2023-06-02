@@ -23,14 +23,6 @@ public class UserLoginController {
 	UserLoginService service;
 	
 	
-	
-	/*시작*/
-	@GetMapping("/index")
-	public String start() {
-		return "index";
-	}
-	
-	
 	/*로그인*/
 	@GetMapping("/userLogout")
 	public String logout(HttpServletRequest request) {
@@ -230,7 +222,8 @@ public class UserLoginController {
 		@PostMapping("/form")
 		public String processUpdateForm(MemberDTO dto) {
 			service.updateMember(dto);
-			return "redirect:/form";	
+			return "redirect:/form";
+			
 		}
 		
 		@GetMapping("/form2")

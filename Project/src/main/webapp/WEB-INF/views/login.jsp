@@ -30,9 +30,11 @@
 </script>
 </head>
 <body>
-<div class="wrap">
+
 <%@ include file="header.jsp" %>
-<div class="container">
+
+<section>
+<div class="box">
    <form action="<c:url value='/userLogin'/>" method="post" onsubmit="return formCheck(this);">
        <h3 id="title">Login</h3>
        <div id="msg">
@@ -58,6 +60,6 @@
    </div>
    
  </div>
-</div> 
+</section>
 </body>
 </html>
