@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 import com.acorn.project.DAO.ClickDAO;
 import com.acorn.project.DAO.MatchingDAO;
+import com.acorn.project.DAO.Member_tblDAO;
 import com.acorn.project.DTO.ClickDTO;
 import com.acorn.project.DTO.MatchingDTO;
 
@@ -18,6 +19,9 @@ public class MatchingService {
 	
 	@Autowired
 	ClickDAO ck_dao;
+	
+	@Autowired
+	Member_tblDAO mem_dao;
 	
 	public String checkgender(String member_id) {
 		
@@ -79,6 +83,13 @@ public class MatchingService {
 	// 
 	public String getStatus(String id1,String id2) {
 		return dao.getStatus(id1, id2);
+	}
+	
+	//
+	public ArrayList<String> getMember_info(String member_id) {
+		
+		ArrayList<String> Match_mem_list = mem_dao.getMember_info(member_id);
+		return Match_mem_list;
 	}
 		
 }
