@@ -24,7 +24,8 @@
 				</div>
 				<div class="mypage"> 
 					<a href="/project/userLogin">로그인</a>
-					<a href="mypage.jsp">마이페이지</a>
+					
+					<a href="/project/mypage">마이페이지</a>
 				</div>
 			
 			<% 
@@ -39,7 +40,7 @@
 				</div>
 				<div class="mypage"> 
 					<a href="/project/userLogout">로그아웃</a>
-					<a href="mypage.jsp">마이페이지</a>
+					<a href="/project/mypage">마이페이지</a>
 				</div>
 			<%
 		}
