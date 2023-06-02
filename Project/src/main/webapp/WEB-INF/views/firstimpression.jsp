@@ -26,7 +26,10 @@
 	                </c:when>
                 	<c:when test="${list ==null }">
                 		<div class="nullMember">
-                			<h2>죄송합니다 ! 평가할 회원이 없네요</h2>
+                			<span class="nullMsg">죄송합니다 !</span><br>
+                			<span class="nullMsg">평가할 회원이 없네요</span><br>
+                			<span class="nullMsg">또 다른 회원님들을 모셔울게요</span><br>
+                			<span class="nullMsg">조금만 기다려 주세요!!ㅠㅠ</span>
                 		</div>
                 	</c:when>
                 </c:choose>

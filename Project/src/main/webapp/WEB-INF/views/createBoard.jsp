@@ -1,19 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<c:set var="path" value="${pageContext.request.contextPath}"/>s
+<c:set var="path" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link rel="stylesheet" href="/project/resources/css/header.css">
-<link href="${path}/resources/css/createBoard.css" rel="stylesheet">
+<link href="/project/resources/css/createBoard.css" rel="stylesheet">
 </head>
 <body>
 <%@ include file="header.jsp" %>
-
 <section>
     <div class="container">
         <form action="<c:url value='/board/create' />" enctype="multipart/form-data" method="post" onsubmit="return postBoard();">

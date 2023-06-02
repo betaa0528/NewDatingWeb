@@ -1,0 +1,153 @@
+@charset "UTF-8";
+.signUp{
+	padding: 20px 0;
+  	background: white;
+  	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  	width : 32vw;
+  	margin : 0 auto;
+}
+
+h2{
+	text-align : center;
+}
+/* Styles for the form */
+form {
+  margin: 20px auto;
+  width : 30vw;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 10px;
+}
+
+/* Styles for input fields */
+input[type="text"],
+input[type="password"] {
+  width: 90%;
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-left : 5%;
+  margin-right : 5%;
+  border : none;
+  border-bottom: 1px solid rgba(116, 116, 116, 0.44);
+  height : 3vh;
+  outline: none;
+}
+
+input[type="file"] {
+  width: 90%;
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-left : 5%;
+  margin-right : 5%;
+  border : none;
+  height : 3vh;
+  outline: none;
+}
+
+input[type="radio"] {
+	padding : 5px;
+	margin-left : 7%;
+}
+
+.form-field{
+	position: relative;
+	margin-bottom: 1.5em;
+}
+
+.form-field label {
+  position: absolute;
+  top: 1em;
+  left: 3em;
+  cursor: text;
+  transition: top 0.3s, font-size 0.3s;
+  color: rgba(116, 116, 116, 0.44);
+  user-select: none;
+}
+
+td .title_span{
+	position: absolute;
+	display : block;
+	top: -0.8em;
+	left : 3em;
+	font-size: 0.8em;
+	color: #0066ff;
+}
+
+.form-field input[type="text"]:focus,
+.form-field input[type="password"]:focus{
+	border-bottom: 1px solid rgb(249, 63, 76);
+}
+
+label.active {
+	top: -0.5em;
+	left : 3em;
+	font-size: 0.8em;
+	color: #0066ff;
+}
+        
+        
+#gender_input{
+	height: 3vh;
+	width: 10vw;
+}
+
+/* Styles for submit button */
+input[type="submit"] {
+  padding: 10px;
+  width : 90%;
+  margin-left : 5%;
+  margin-right : 5%;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(270.67deg, rgba(255, 94, 229, 0.5) 5.26%, rgba(255, 94, 229, 0) 89.48%), #FF7979;
+  border-radius: 10px;
+}
+
+.preview_td{
+	display:none;
+}
+
+/* Styles for section */
+section {
+  margin: 40px auto;
+  width : 60vw;
+}
+
+#preview1, #preview2, #preview3{
+	width : 5vw;
+	height: 12vh;
+	margin-right: 1vw;
+	border : none;
+	
+}
+
+.preview-image{
+	display:none;
+}
+
+
+.id_input_re_1 , .email_input_re_1{
+	color : green;
+	display : none;
+	font-size: 12px;
+	margin-top: 5px;
+}
+/* 중복아이디 존재하는 경우 */
+.id_input_re_2, .email_input_re_2{
+    color : red;
+    display : none;
+    font-size: 12px;
+	margin-top: 5px;
+}
+        
+#tr_like_cnt, #tr_game_point, #tr_grade_input, .tr_likeType_input{
+	display : none;
+}
