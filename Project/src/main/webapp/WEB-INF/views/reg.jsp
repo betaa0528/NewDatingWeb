@@ -7,148 +7,123 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="/project/resources/css/header.css">
+<link rel="stylesheet" href="/project/resources/css/reg.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <style>
-	    section{
-			margin-top : 40px;
-		}
-        section table{
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-
-        section td{
-            border: 1px solid black;
-        }
-
-  		.id_input_re_1 , .email_input_re_1{
-			color : green;
-			display : none;
-	    }
-        /* 중복아이디 존재하는 경우 */
-        .id_input_re_2, .email_input_re_2{
-            color : red;
-            display : none;
-        }
-        
-        #tr_like_cnt, #tr_game_point, #tr_grade_input, .tr_likeType_input{
-        	display : none;
-        }
-    </style>
 </head>
 <body>
-<header>
-	<div class="contain">
-		<div class="logo">
-			<a href="/project ">
-			<img src="resources/images/로고.png"></a>
-		</div>
-	<%
-	HttpSession session2 = request.getSession();
-	String sessionId = (String)session.getAttribute("sessionId");
-	if(sessionId==null){
-	%>
-	<div class="category"> 
-			<a href="#">매칭</a>
-			<a href="#">평가</a>
-			<a href="#">게시판</a>
-			<a href="#">게임</a>
-			<a href="#">채팅</a>
-		</div>
-	
-	<% 
-	}else{
-	%>
-	<div class="category"> 
-			<a href="#">매칭</a>
-			<a href="/project/firstimpression">평가</a>
-			<a href="/project/board">게시판</a>
-			<a href="/project/map2">게임</a>
-			<a href="/project/chatting_room2">채팅</a>
-		</div>
-	<%
-	}
-	%>
-		
-
-		<div class="mypage"> 
-			<a href="mypage.html"><img src="resources/images/마이페이지.png"></a>
-		</div>
-	</div>
-</header>
+<%@ include file="header.jsp" %>
 <section>
-	<div>
+	<div class="signUp">
+	   <h2>회원가입</h2>
        <form action="<c:url value='/reg' />" method="post" id="join_form" onsubmit="return test()">
            <table>
                <tr>
-                   <td>아이디</td>
-                   <td><input type="text" name="member_id" class="id_input">
-                   <!-- <button onclick="idChk()">중복확인</button>  -->
+                   <td class="form-field">
+                   <label for="id_input">아이디</label>
+                   <input type="text" name="member_id" class="id_input">
+                    <!-- <button onclick="idChk()">중복확인</button>  -->
                    	<span class="id_input_re_1">사용 가능한 아이디입니다.</span>
 					<span class="id_input_re_2">아이디가 이미 존재합니다.</span>
-				</td>
+				   </td>
                </tr>
                <tr>
-                   <td>이름</td>
-                   <td><input type="text" name="mname" id="mname_input"></td>
+                   <td class="form-field">
+                    <label for="mname_input">이름</label>
+                    <input type="text" name="mname" id="mname_input">
+                   </td>
                </tr>
                <tr>
-                   <td>이메일</td>
-                   <td><input type="text" name="email" id="email_input" autocomplete="off">
+                   <td class="form-field">
+                    <label for="email_input">이메일</label>
+                   	<input type="text" name="email" id="email_input" autocomplete="off">
 	                   <span class="email_input_re_1">올바른 형식의 이메일입니다.</span>
 						<span class="email_input_re_2">올바른 형식이 이메일주소가 아닙니다.</span>
 				   </td>
                </tr>
                <tr>
-                   <td>비밀번호</td>
-                   <td><input type="password" name="mpassword" id="pw_input"  autocomplete="off"></td>
+                   <td class="form-field">
+                    <label for="pw_input">비밀번호</label>
+                   	<input type="password" name="mpassword" id="pw_input"  autocomplete="off">
+                   </td>
                </tr>
                <tr>
-                   <td>나이</td>
-                   <td><input type="text" name="age" id="age_input"></td>
+                   <td class="form-field">
+                    <label for="age_input">나이</label>
+                   	<input type="text" name="age" id="age_input">
+                   </td>
                </tr>
                <tr>
-                   <td>성별</td>
-                   <td><input type="text" name="gender" id="gender_input" maxlength=1></td>
+                   <td class="form-field">
+                   	   <span class="title_span">성별</span>
+                   	   <input type="radio" name="gender" value="M">남자 
+                   	   <input type="radio" name="gender" value="W">여자
+                   </td>
                </tr>
                <tr>
-                   <td>전화번호</td>
-                   <td><input type="text" name="phone" id="phone_input" autocomplete="off"></td>
+                   <td class="form-field">
+                    <label for="phone_input">전화번호</label>
+                    <input type="text" name="phone" id="phone_input" autocomplete="off">
+                   </td>
                </tr>
                <tr>
-                   <td>자기소개</td>
-                   <td><input type="text" name="introduce" id="introduce_input" value=""></td>
+                   <td class="form-field">
+                    <label for="introduce_input">자기소개</label>
+                   	<input type="text" name="introduce" id="introduce_input" value="">
+                   </td>
                </tr>
                
                <tr>
-                   <td>MBTI</td>
-                   <td><input type="text" name="mbti" id="mbti_input" value=""></td>
+                   <td class="form-field">
+                    <label for="mbti_input">MBTI</label>
+                   <input type="text" name="mbti" id="mbti_input" value="">
+                   </td>
                </tr>
 
                <tr>
-                   <td>종교</td>
-                   <td><input type="text" name="religion" id="religion_input" value=""></td>
+                   <td class="form-field">
+                    <label for="religion_input">종교</label>
+                   	<input type="text" name="religion" id="religion_input" value="">
+                   </td>
                </tr>
                <tr>
-                   <td>직업</td>
-                   <td><input type="text" name="job" id="job_input" value=""></td>
+                   <td class="form-field">
+                    <label for="job_input">직업</label>
+                   	<input type="text" name="job" id="job_input" value="">
+                   </td>
                </tr>
                <tr>
-                   <td>사진</td>
-                   <td><input type="file" name="image" id="image_input" multiple></td>
+                   <td class="form-field">
+	                <span class="title_span">프로필 사진</span>
+	                <input type="file" name="image" id="image_input" multiple  onchange="readURL(this);">
+                   </td>
                </tr>
                <tr>
-                   <td>키</td>
-                   <td><input type="text" name="height" id="height_input" value=""></td>
+
+                   <td class="preview_td">
+                   	<img id="preview1"  class="preview-image"/>
+                   	<img id="preview2"  class="preview-image"/>
+                   	<img id="preview3"  class="preview-image"/>
+                   </td>
                </tr>
                <tr>
-                   <td>몸무게</td>
-                   <td><input type="text" name="weight" id="weight_input" value=""></td>
+                   <td class="form-field">
+                    <label for="height_input">키 (마음만은 장신!!)</label>
+                   	<input type="text" name="height" id="height_input" value="">
+                   </td>
                </tr>
                <tr>
-                   <td>좋아하는 타입</td>
-                   <td><input type="text" name="love_type" id="love_type_input"></td>
+
+                   <td class="form-field">
+                    <label for="weight_input">몸무게 (싫다면 작성하지 말아요!)</label>
+                   	<input type="text" name="weight" id="weight_input" value="">
+                   </td>
+               </tr>
+               <tr>
+
+                   <td class="form-field">
+                    <label for="love_type_input">내 이상형은??</label>
+                   	<input type="text" name="love_type" id="love_type_input">
+                   </td>
                </tr>
 			   <tr id="tr_grade_input">
                    <td>등급</td>
@@ -163,25 +138,25 @@
                    <td>게임점수</td>
                    <td><input type="text" name="game_point" id="game_point_input" value="0"></td>
                </tr>
-
-               <tr>
-                   <td colspan="2"><input type="submit" value="가입" class="join_button"></td>
-               </tr>
-               <tr class="tr_likeType_input">
-                   <td>등급</td>
+			   <tr class="tr_likeType_input">
+                   <td>첫인상1</td>
                    <td><input type="text" name="like_type1" value="0"></td>
                </tr>
                <tr class="tr_likeType_input">
-                   <td>등급</td>
+                   <td>첫인상2</td>
                    <td><input type="text" name="like_type2" value="0"></td>
                </tr>
                <tr class="tr_likeType_input">
-                   <td>등급</td>
+                   <td>첫인상3</td>
                    <td><input type="text" name="like_type3" value="0"></td>
                </tr>
                <tr class="tr_likeType_input">
-                   <td>등급</td>
+                   <td>첫인상4</td>
                    <td><input type="text" name="like_type4" value="0"></td>
+               </tr>
+               
+               <tr>
+                   <td><input type="submit" value="가입" class="join_button"></td>
                </tr>
                
                
@@ -201,7 +176,21 @@
 	var phonechk = false;
 	var imagechk = false;
 
+	function readURL(input) {
+	    var previewImages = document.querySelectorAll('.preview-image');
 
+	    for (let i = 0; i < input.files.length; i++) {
+	        if (input.files && input.files[i]) {
+	            var reader = new FileReader();
+	            reader.onload = function(e) {
+	                previewImages[i].src = e.target.result;
+	                previewImages[i].style.display = "inline"; // 이미지가 미리보기되면 보이도록 설정
+	            };
+	            reader.readAsDataURL(input.files[i]);
+	        }
+	    }
+	}
+	
 	/* 이미지 업로드 */
 	// pom.xml 134줄 servlet추가해줘야함
 	// web.xml 2번째줄수정 , upload관련 추가함
@@ -381,6 +370,20 @@
 		}
 
     });// function 종료
+    
+    const labels = document.querySelectorAll('label');
+
+    labels.forEach(label => {
+        const input = label.nextElementSibling;
+
+        input.addEventListener('input', () => {
+            if (input.value !== '') {
+                label.classList.add('active');
+            } else {
+                label.classList.remove('active');
+            }
+        });
+    });
 </script>
 
 </body>

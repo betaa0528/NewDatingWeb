@@ -43,6 +43,7 @@ section{
 
 .container input[type="text"]{
 	height: 10vh;
+	box-sizing: border-box;
 }
 
 

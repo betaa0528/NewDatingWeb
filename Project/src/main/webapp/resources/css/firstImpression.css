@@ -1,9 +1,7 @@
 @charset "UTF-8";
 
 section {
-    margin: 40px;
     overflow: auto;
-    height: 80vh;
 }
 
 .container {
@@ -11,9 +9,10 @@ section {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    width: 25vw;
+    width: 32vw;
     margin: 5vh auto;
-    border : 1px solid red;
+    background: white;
+  	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .wrap {
@@ -30,22 +29,25 @@ section {
 
 .profile img {
     width: 300px;
-    height: 300px;
+    height: 50vh;
     border-radius: 10px;
     object-fit: cover;
     margin-bottom: 10px;
+  	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .introduce{
-	border : 1px solid blue;
+	margin : 1vh auto;
 }
 
 .nullMember{
 	width: 300px;
-    height: 300px;
+    height: 50vh;
     border-radius: 10px;
     object-fit: cover;
     margin-bottom: 10px;
+    background: linear-gradient(270.67deg, rgba(0, 74, 255, 0.5) 5.26%, rgba(255, 94, 229, 0) 89.48%), #4a5ac1;
+	border-radius: 10px;
 }
 
 .btnBox {
@@ -60,7 +62,8 @@ section {
     padding: 10px 20px;
     width: 200px;
     height: 50px; /* 수정된 부분 */
-    background-color: #2196f3;
+    background: linear-gradient(270.67deg, rgba(255, 94, 229, 0.5) 5.26%, rgba(255, 94, 229, 0) 89.48%), #FF7979;
+	border-radius: 10px;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -71,7 +74,8 @@ section {
     background-color: #0a84e4;
 }
 
-h2 {
-    color: #ff0000;
+.nullMsg {
+    color : #fff;
     text-align: center;
+    font-size: 2.2em;
 }
