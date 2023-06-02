@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+    * {
+        box-sizing: border-box;
+        
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+        /*display: flex;*/
+        justify-content: center;
+        align-items: center;
+        /*min-height: 100vh;*/
+        overflow: scroll;
+    }
+    
+    .container2 {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        height: 80vh;
+        margin-top: 70px;
+        overflow: scroll;
+        
+    }
+
+    .container {
+        width: 570px;      
+        padding: 20px;
+        border: 1px solid #FFEFEF;
+        border-radius: 10px;
+        background: #FFEFEF;
+        margin: 0 auto;
+        margin-top: 50px;
+        
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    input[type="text"] {
+        margin-bottom: 10px;
+        padding: 5px;
+        border: 1px solid #FFEFEF;
+    }
+
+    .input-label {
+        font-weight: bold;
+        margin-bottom: 5px;       
+    }
+
+    input[type="submit"] {
+        margin-top: 10px;
+        width: 158px;
+        height: 67px;
+        left: calc(50% - 158px/2 - 103px);
+        top: 843px;
+
+        background: linear-gradient(270.67deg, rgba(255, 94, 229, 0.5) 5.26%, rgba(255, 94, 229, 0) 89.48%), #FF7979;
+        border-radius: 10px;
+        border: 1px solid  #FF7979;
+    }
+    
+    .button-container {
+        text-align: center;
+        width: 158px;
+        height: 67px;
+    }
+
+    .button-container a {
+        display: inline-block;
+        margin: 10px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        padding: 10px 20px;
+        border: none;
+        /*border-radius: 5px;
+        background-color: #333;*/
+        background: linear-gradient(270.67deg, rgba(255, 199, 246, 0.5) 5.26%, rgba(255, 94, 229, 0) 89.48%), #B6B6B6;
+        border-radius: 10px;
+        
+    }
+    .button-calss {
+        display: block;
+    }

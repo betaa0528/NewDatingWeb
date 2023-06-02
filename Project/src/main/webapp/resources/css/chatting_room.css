@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	
+	section{
+		background: pink;
+		margin: 50px auto;
+		padding: 50px;
+		height: 600px;
+		display: flex;
+		gap: 50px;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	#chat_container{
+		width: 500px;
+		height: 500px;
+	}
+	#chat_container2{
+		width: 500px;
+		height: 500px;
+	}
+	#chat_header{
+		background: white;
+		height: 50px;
+		padding: 10px 10px;
+		display: flex;
+		justify-content: space-between;
+	}
+	#chat_section{
+		background: #ffe7f2;
+		height: 400px;
+		padding: 10px;
+		overflow: auto;
+	}
+	#chat_section2{
+		background: #ffe7f2;
+		height: 400px;
+		padding: 10px;
+		overflow: auto;
+	}
+	#chat_footer{
+		background: white;
+		height: 50px;
+	}
+	a{
+		text-decoration:none;
+	}
+	#container_1{
+		display: flex;
+	}
+	#opponent{
+		align-self: center;
+		margin: 0 10px;
+	}
+	#chat_input{
+		width: 430px;
+		height: 50px;
+		border: none;
+		padding: 10px;
+		outline: none;
+	}
+	#chat_btn{
+		width: 60px;
+		height: 30px;
+	}
+	
+
+	#chat_section2{
+		background: #ffe7f2;
+		height: 470px;
+		padding: 10px;
+		overflow: auto;
+	}
+	#chat_footer2{
+		background: white;
+		height: 50px;
+	}
+	
+	#chat_header2_2{
+	display: flex;
+	}
+	.profile{
+		width: 20%;
+		height: 80px;
+		text-align: center;
+	}
+	.white{
+		background: aliceblue;
+	}
+	.bar1{
+		width: 100%;
+		height: 30px;
+		font-size: 14px;
+		color: #ed6086;
+		padding: 5px 10px;
+	}
+	.circle{
+		border-radius: 50%;
+	}
+	.member_box{
+	
+		height: 70px;		
+		display: flex;
+		border-bottom: #b3b3b3 1px solid;
+		
+	}
+	.member_img_box{
+		width: 70px;
+		height: 70px;	
+	}
+	.size12{
+		font-size:12px;
+	}
+	.size14{
+		font-size:14px;
+	}
+	.member_img_box_1{
+		margin:10px;
+	}
+	.member_img_box_2{
+		margin:10px;
+		margin-left: 20px;
+		color: #b3b3b3;
+	}
+	
+	.side{
+		width: 250px;
+		height: 250px;
+		border-radius:50%;
+		border: 10px solid #ffddff;
+		background: #FFeeee;
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		color: #ff80ff;
+		font-weight: bold;
+	}
