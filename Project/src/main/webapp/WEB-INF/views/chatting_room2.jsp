@@ -54,7 +54,7 @@ let img1 = "<%=myInfo[1]%>";
 		<div id="chat_container">
 		<div id="chat_header">
 			<div id="container_1">
-			<a href="#" id="chat_back">
+			<a href="/project/" id="chat_back">
 				<img src="resources/images/back.png" width = 30px; >
 			</a>
 			<span id="opponent">채팅 상대를 고르세요</span>
@@ -65,7 +65,7 @@ let img1 = "<%=myInfo[1]%>";
 			<a href="#" id="report_btn">
 				<img src="resources/images/siren.png" width = 30px; >
 			</a>
-			<a href="#" >
+			<a href="/project/" >
 				<img src="resources/images/exit.png" width = 30px; id="chat_exit">
 			</a>
 			</div>
