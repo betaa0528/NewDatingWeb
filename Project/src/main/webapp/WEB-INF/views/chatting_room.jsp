@@ -158,7 +158,7 @@ let img2 = "${opponentInfo[1]}";
 					
 					<div class="member_box">
 						<div class="member_img_box">
-							<img src="<%=opponentsInfo.get(i)[4]%>" width="70px" height="70px" class="circle" >
+							<img src="<%=opponentsInfo.get(i)[4]%>" width="65px" height="65px" class="circle" >
 						</div>
 						<div>
 							<div class="size14 member_img_box_1"><%=opponentsInfo.get(i)[3]%></div>
@@ -242,7 +242,7 @@ let img2 = "${opponentInfo[1]}";
 		chatContentTime.innerHTML=when+" "+hour+":"+minutes;
 		chatContentTime.style.fontSize="10px";
 		chatContentTime.style.textAlign="right";
-		
+		chatContentTime.style.marginRight="5px";
 		chatContent.appendChild(chatContent2);
 		chatContent.appendChild(chatContentTime);
 		
@@ -358,7 +358,8 @@ let img2 = "${opponentInfo[1]}";
 		chatContentTime.innerHTML=oldDate;
 		chatContentTime.style.fontSize="10px";
 		chatContentTime.style.textAlign="right";
-		
+		chatContentTime.style.marginRight="7px";
+
 		chatContent.appendChild(chatContent2);
 		chatContent.appendChild(chatContentTime);
 		
