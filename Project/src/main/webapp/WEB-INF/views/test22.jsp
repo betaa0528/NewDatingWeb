@@ -227,27 +227,27 @@
         <table>
             <tr>
                 <td> 🤔 이름 / 나이 🤔 </td>
-                <td> 김수현 / 26 </td>
+                <td> ${memlist.get(0)} / ${memlist.get(1)} </td>
             </tr>
             <tr>
                 <td> 💁 자기소개 💁</td>
-                <td> 안녕하세요. 저는 김수현입니다. 간다ㅏ라마다알ㄴ일낭헝ㄹ히ㅏㅁ오라험오람너외ㅏㅇ러ㅗ하미ㅓ오히머오라ㅓㄴㅇ라ㅗ </td>
+                <td> ${memlist.get(2)} </td>
             </tr>
             <tr>
                 <td> 🤩 MBTI 🤩</td>
-                <td> ENFP </td>
+                <td> ${memlist.get(3)} </td>
             </tr>
             <tr>
                 <td> 👏 종교 👏</td>
-                <td> 무교 </td>
+                <td> ${memlist.get(4)} </td>
             </tr>
             <tr>
                 <td> 💁‍♂️ 직업 💁‍♂️</td>
-                <td> 프리랜서 </td>
+                <td> ${memlist.get(5)} </td>
             </tr>
             <tr>
                 <td> ❤️‍🔥 이상형 ❤️‍🔥</td>
-                <td> 이쁜사람 </td>
+                <td> ${memlist.get(6)} </td>
             </tr>
 
         </table>
