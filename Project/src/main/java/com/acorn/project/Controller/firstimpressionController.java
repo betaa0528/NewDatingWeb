@@ -37,6 +37,26 @@ public class firstimpressionController {
 		List<firstimpressionDTO> list = service.allMethod(memberId);
 		model.addAttribute("list", list);
 		return "firstimpression";
+		
+	}
+	
+	// 
+	@GetMapping("/mypage")
+	public String mypage(HttpSession session, Model model) {
+		String memberId = (String) session.getAttribute("sessionId");
+		if(memberId==null) {
+			return "login";
+		}
+		List<firstimpressionDTO> list = service.memberList(memberId);
+		model.addAttribute("list", list);
+		System.out.println("listststs" + list.get(0).getLike_type1());
+		
+		
+		ArrayList<String> list2 = service.getMember_info2(memberId);
+		model.addAttribute("list2", list2);
+		
+		
+		return "mypage";
 	}
 	
 	
