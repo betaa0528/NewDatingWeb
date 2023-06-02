@@ -106,9 +106,16 @@ let img2 = "${opponentInfo[1]}";
 <body>
 <%@ include file="header.jsp" %>
 <section>
-		<div class="side side1">
+		<div class="side_box">
+			<div class="side side_small left">
+			</div>
+			<div class="side side1">
 			현재 날짜는?
+			</div>
+			<div class="side side_small left">
+			</div>
 		</div>
+		
 		<div id="chat_container">
 		<div id="chat_header">
 			<div id="container_1">
@@ -168,9 +175,15 @@ let img2 = "${opponentInfo[1]}";
 	
 	<% }%>
 	
+	<div class="side_box">
+	<div class="side side_small right">
+			</div>
 	<div class="side side2">
 			현재 시간은?
 		</div>
+		<div class="side side_small right">
+			</div>
+	</div>
 	
 </section>
 <footer>
