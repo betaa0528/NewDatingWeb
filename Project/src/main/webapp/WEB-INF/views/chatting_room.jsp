@@ -119,7 +119,7 @@ let img2 = "${opponentInfo[1]}";
 		<div id="chat_container">
 		<div id="chat_header">
 			<div id="container_1">
-			<a href="#" id="chat_back">
+			<a href="/project/chatting_room2" id="chat_back">
 				<img src="resources/images/back.png" width = 30px; >
 			</a>
 			<span id="opponent"><%=opponentInfo[2]%></span>
@@ -130,7 +130,7 @@ let img2 = "${opponentInfo[1]}";
 			<a href="#" id="report_btn">
 				<img src="resources/images/siren.png" width = 30px; >
 			</a>
-			<a href="#" >
+			<a href="/project/chatting_room2" >
 				<img src="resources/images/exit.png" width = 30px; id="chat_exit">
 			</a>
 			</div>
