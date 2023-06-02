@@ -231,18 +231,21 @@ let img2 = "${opponentInfo[1]}";
 		}else{
 			when="오전";
 		}
-		hour += "";
+		
 
-		if(hour.trim().length==1){
+		if(hour<10){
 			hour = "0"+hour;
 		}
-		if(minutes.length==1){
+		if(minutes<10){
 			minutes = "0"+minutes;
 		}
+		hour += "";
 		chatContentTime.innerHTML=when+" "+hour+":"+minutes;
 		chatContentTime.style.fontSize="10px";
 		chatContentTime.style.textAlign="right";
 		chatContentTime.style.marginRight="5px";
+		chatContentTime.style.marginTop="5px";
+
 		chatContent.appendChild(chatContent2);
 		chatContent.appendChild(chatContentTime);
 		
@@ -307,7 +310,8 @@ let img2 = "${opponentInfo[1]}";
 		chatContentTime.innerHTML=when+" "+hour+":"+minutes;
 		chatContentTime.style.fontSize="10px";
 		chatContentTime.style.textAlign="left";
-		
+		chatContentTime.style.marginTop="5px";
+
 		chatContent.appendChild(chatContent3);
 		chatContent.appendChild(chatContentTime);
 		
@@ -359,6 +363,8 @@ let img2 = "${opponentInfo[1]}";
 		chatContentTime.style.fontSize="10px";
 		chatContentTime.style.textAlign="right";
 		chatContentTime.style.marginRight="7px";
+		chatContentTime.style.marginTop="5px";
+
 
 		chatContent.appendChild(chatContent2);
 		chatContent.appendChild(chatContentTime);
@@ -406,7 +412,8 @@ let img2 = "${opponentInfo[1]}";
 		chatContentTime.innerHTML=oldDate;
 		chatContentTime.style.fontSize="10px";
 		chatContentTime.style.textAlign="left";
-		
+		chatContentTime.style.marginTop="5px";
+
 		chatContent.appendChild(chatContent3);
 		chatContent.appendChild(chatContentTime);
 		
