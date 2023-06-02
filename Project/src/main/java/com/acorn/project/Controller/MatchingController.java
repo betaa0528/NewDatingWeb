@@ -1,5 +1,7 @@
 package com.acorn.project.Controller;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -52,6 +54,13 @@ public class MatchingController {
 			model.addAttribute("result1" , result1);
 			model.addAttribute("result2", result4 .getMember_id());
 		}
+		
+		//
+		if(result4!=null) {
+			ArrayList<String> memlist = mt_service.getMember_info(result4.getMember_id());
+			model.addAttribute("memlist",memlist);
+		}
+		
 		
 		return "test22";
 	}
