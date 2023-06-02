@@ -47,6 +47,8 @@
 	#chat_footer{
 		background: white;
 		height: 50px;
+		display:flex;
+		align-items: center;
 	}
 	a{
 		text-decoration:none;
@@ -140,4 +142,18 @@
 		align-items: center;
 		color: #ff80ff;
 		font-weight: bold;
+	}
+	.side_box{
+		width: 250px;
+	}
+	.side_small{
+	width: 100px;
+	height: 100px;
+	background: #eeddff;
+	}
+	.left{
+		float:left;
+	}
+	.right{
+		float:right;
 	}
