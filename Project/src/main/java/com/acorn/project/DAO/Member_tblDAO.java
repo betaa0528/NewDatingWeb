@@ -253,8 +253,8 @@ public class Member_tblDAO {
 	/*마이페이지 수정*/
 	public void update(MemberDTO dto) {
 		String sql=" update Member_tbl set mname=?, email=?, mpassword=?, age=?, gender=?, phone=?, introduce=?, grade=?, "
-		        + " mbti=?, religion=?, job=?, image=?, height=?, weight=?, love_type=?, like_cnt=?, game_point=? where member_id=? ";
-		
+		        + " mbti=?, religion=?, job=?, image=?, height=?, weight=?, love_type=?, like_cnt=?, game_point=?,like_type1=?,like_type2=?,like_type3=?,like_type4=? where member_id=? ";
+		System.out.println("사진확인 : " + dto.getImage());
 		try {
 			Connection con = dataSource.getConnection();
 			PreparedStatement pst = con.prepareStatement(sql);
@@ -276,7 +276,11 @@ public class Member_tblDAO {
 			pst.setString(15, dto.getLove_type());
 			pst.setString(16, dto.getLike_cnt());
 			pst.setString(17, dto.getGame_point());
-			pst.setString(18, dto.getMember_id());
+			pst.setInt(18, dto.getLike_type1());
+			pst.setInt(19, dto.getLike_type2());
+			pst.setInt(20, dto.getLike_type3());
+			pst.setInt(21, dto.getLike_type4());
+			pst.setString(22, dto.getMember_id());
 			pst.executeUpdate();
 		  } catch(SQLException e) {
 			  e.printStackTrace();
@@ -317,7 +321,11 @@ public class Member_tblDAO {
 		                rs.getString("weight"),
 		                rs.getString("love_type"),
 		                rs.getString("like_cnt"),
-		                rs.getString("game_point")
+		                rs.getString("game_point"),
+		                rs.getInt("like_type1"),
+		                rs.getInt("like_type2"),
+		                rs.getInt("like_type3"),
+		                rs.getInt("like_type4")
 				);
 				}
 			  } catch(SQLException e) {

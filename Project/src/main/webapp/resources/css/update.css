@@ -5,41 +5,51 @@
         
     }
 
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #ffffff;
-        margin: 0;
-        padding: 0;
-        /*display: flex;*/
-        justify-content: center;
-        align-items: center;
-        /*min-height: 100vh;*/
-        overflow: scroll;
-    }
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /*overflow: auto;*/
+}
+
+
+.container2 {
+  background-color: #ffffff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
     
-    .container2 {
-        font-family: Arial, sans-serif;
-        background-color: #ffffff;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        height: 80vh;
-        margin-top: 70px;
-        overflow: scroll;
-        
-    }
+   
 
     .container {
-        width: 570px;      
-        padding: 20px;
-        border: 1px solid #FFEFEF;
-        border-radius: 10px;
-        background: #FFEFEF;
-        margin: 0 auto;
-        margin-top: 50px;
-        
-    }
+  width: 570px;
+  padding: 20px;
+  border: 1px solid #ffefef;
+  border-radius: 10px;
+  background: #ffefef;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+
+
+
+.image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Add this line to evenly distribute the images */
+}
+
+.image-container img {
+  width: 170px;
+  height: 200px;
+  object-fit: cover; /* Add this line to maintain the aspect ratio of the images */
+}
+
 
     h1 {
         text-align: center;
@@ -49,10 +59,17 @@
     form {
         display: flex;
         flex-direction: column;
+        width: 550px;
+        margin: 0 auto;
         
     }
+    .button-box{
+       /* display: inline-block;*/
+       /*flex-direction: row;*/
+       justify-content: space-around;
+    }
 
-    input[type="text"] {
+    /*input[type="text"] {
         margin-bottom: 10px;
         padding: 5px;
         border: 1px solid #FFEFEF;
@@ -61,40 +78,85 @@
     .input-label {
         font-weight: bold;
         margin-bottom: 5px;       
-    }
+    }*/
 
     input[type="submit"] {
-        margin-top: 10px;
-        width: 158px;
-        height: 67px;
-        left: calc(50% - 158px/2 - 103px);
-        top: 843px;
+  margin-top: 10px;
+  margin: 0 auto;
+  width: 211.25; /* 버튼을 가로로 꽉 차게 설정 */
+  height: 41px;
+  background: linear-gradient(
+      270.67deg,
+      rgba(255, 94, 229, 0.5) 5.26%,
+      rgba(255, 94, 229, 0) 89.48%
+    ),
+    #ff7979;
+  border-radius: 10px;
+  border: 1px solid #ff7979;
+}
 
-        background: linear-gradient(270.67deg, rgba(255, 94, 229, 0.5) 5.26%, rgba(255, 94, 229, 0) 89.48%), #FF7979;
-        border-radius: 10px;
-        border: 1px solid  #FF7979;
-    }
-    
-    .button-container {
-        text-align: center;
-        width: 158px;
-        height: 67px;
-    }
+
+.form-field {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  margin: 15px;
+}
+.form-field input {
+  border: none;
+  padding: 5px;
+  border-bottom: 1px solid rgba(116, 116, 116, 0.44);
+  height: 30px;
+  transition: border-bottom 0.1s ease-in-out 0.1s;
+}
+.form-field input:focus {
+  border-bottom: 1px solid rgb(249, 63, 76);
+}
+.form-field label {
+   font-weight: bold;
+        margin-bottom: 5px;      
+}
+
+.like-field{
+	display : none;
+}
+
+
+.button-container {
+  text-align: center;
+  width: 100%; /* 버튼을 가로로 꽉 차게 설정 */
+  margin-top: 20px; /* 버튼과의 간격 조절 */
+}
 
     .button-container a {
-        display: inline-block;
-        margin: 10px;
-        text-decoration: none;
-        color: #fff;
-        font-weight: bold;
-        padding: 10px 20px;
-        border: none;
-        /*border-radius: 5px;
-        background-color: #333;*/
-        background: linear-gradient(270.67deg, rgba(255, 199, 246, 0.5) 5.26%, rgba(255, 94, 229, 0) 89.48%), #B6B6B6;
-        border-radius: 10px;
-        
-    }
-    .button-calss {
-        display: block;
-    }
+  display: inline-block;
+  margin: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  background: linear-gradient(
+      270.67deg,
+      rgba(255, 199, 246, 0.5) 5.26%,
+      rgba(255, 94, 229, 0) 89.48%
+    ),
+    #b6b6b6;
+  border-radius: 10px;
+}
+
+.button-class {
+  display: block;
+}
+
+
+.button-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.button-box input[type="submit"] {
+  width: 211.25px;
+  cursor: pointer;
+}

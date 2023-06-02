@@ -3,9 +3,26 @@
 * {
        box-sizing: border-box;
    }
+   
+   section {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       height: 800px;
+   }
+   
    a {
        text-decoration: none;
    }
+  /* body {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       height: 100vh;
+       margin: 0;
+       padding: 0;
+   }*/
    form {
        width: 400px;
        height: 500px;
@@ -13,18 +30,16 @@
        flex-direction: column;
        align-items: center;
        justify-content: center;
-       position: absolute;
-       top: 50%;
-       left: 50%;
-       transform: translate(-50%, -50%);
        border: 1px solid #FF8E9E;
        border-radius: 10px;
-       /*background : blue;*/
+       margin: 0 auto;
    }
+   
    input[type='text'] {
        width: 300px;
        height: 40px;
        margin-bottom: 10px;
+       
    }
    input[type='password'] {
        width: 300px;
@@ -33,6 +48,19 @@
        border-radius: 5px;
        padding: 0 10px;
        margin-bottom: 10px;
+   }
+   input[type="submit"] {
+       width: 100%; /* 버튼을 가로로 꽉 차게 설정 */
+       height: 55px;
+       background: linear-gradient(
+                   270.67deg,
+                   rgba(255, 94, 229, 0.5) 5.26%,
+                   rgba(255, 94, 229, 0) 89.48%
+                   ),
+                   #ff7979;
+       border-radius: 10px;
+       border: 1px solid #ff7979;
+       cursor: pointer;
    }
    button {
        background-color: rgb(89, 117, 196);
