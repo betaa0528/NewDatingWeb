@@ -61,8 +61,8 @@ html,body {width:100%;height:100%;margin:0px;padding:0px;overflow:hidden;font-fa
 		<div class="fullsection full4" pageNum="4"><span><img src="resources/images/4page.png"></span></div>
 		<div class="fullsection full5" pageNum="5">
 			<span> 지금 사사모 에서 새로운 <br>인연을 만나보세요  </span>
-			<a href="signup.html"><img src="resources/images/회원가입.png">Sign up !</a>
-			<a href="signin.html"><img src="resources/images/로그인.png">Sign in !</a>
+			<a href="/project/userLogin"><img src="resources/images/회원가입.png">Sign up !</a>
+			<a href="/project/reg"><img src="resources/images/로그인.png">Sign in !</a>
 		</div>
 	</div>
 	
