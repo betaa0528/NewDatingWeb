@@ -1,5 +1,7 @@
 package com.acorn.project.Controller;
 
+import java.io.File;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
 import javax.servlet.http.Cookie;
@@ -7,18 +9,23 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.acorn.project.DTO.MemberDTO;
 import com.acorn.project.service.UserLoginService;
 
 @Controller
 public class UserLoginController {
-	
+	private static final Logger logger = LoggerFactory.getLogger(memberJoinController.class);
+
 	@Autowired
 	UserLoginService service;
 	
@@ -220,9 +227,39 @@ public class UserLoginController {
 		
 		//processUpdateForm: 회원 정보를 업데이트하는 POST 요청을 처리
 		@PostMapping("/form")
-		public String processUpdateForm(MemberDTO dto) {
+		public String processUpdateForm(MemberDTO dto, HttpServletRequest request) {
+			
+			
+			dto.setImage(request.getParameter("image1_1")+","+request.getParameter("image2_2")+","+
+					request.getParameter("image3_3"));
 			service.updateMember(dto);
 			return "redirect:/form";
+			
+		}
+		
+		@PostMapping("/form/formAction")
+		public void fileActionPOST(MultipartFile[] uploadFile, HttpServletRequest request) {
+			String uploadPath = request.getSession().getServletContext().getRealPath("/").concat("resources");
+			
+			String uploadFolder = uploadPath + File.separator + "images";  
+
+			
+			if (uploadFile != null) {
+			    for (MultipartFile multipartFile : uploadFile) {
+			        String uploadFileName = multipartFile.getOriginalFilename();
+			        File saveFile = new File(uploadFolder, uploadFileName);
+			        
+			        try {
+			            multipartFile.transferTo(saveFile);
+			            logger.info("File saved successfully: " + saveFile.getAbsolutePath());
+			        } catch (IllegalStateException | IOException e) {
+			            logger.error("Failed to save file: " + saveFile.getAbsolutePath());
+			            e.printStackTrace();
+			        }
+			    }
+			} else {
+			    logger.info("No files uploaded");
+			}
 			
 		}
 		
