@@ -253,8 +253,8 @@ public class Member_tblDAO {
 	/*마이페이지 수정*/
 	public void update(MemberDTO dto) {
 		String sql=" update Member_tbl set mname=?, email=?, mpassword=?, age=?, gender=?, phone=?, introduce=?, grade=?, "
-		        + " mbti=?, religion=?, job=?, image=?, height=?, weight=?, love_type=?, like_cnt=?, game_point=?,like_type1=?,like_type2=?,like_type3=?,like_type4=? where member_id=? ";
-		System.out.println("사진확인 : " + dto.getImage());
+		        + " mbti=?, religion=?, job=?, image=?, height=?, weight=?, love_type=?, like_cnt=?, game_point=? where member_id=? ";
+		
 		try {
 			Connection con = dataSource.getConnection();
 			PreparedStatement pst = con.prepareStatement(sql);
@@ -276,16 +276,14 @@ public class Member_tblDAO {
 			pst.setString(15, dto.getLove_type());
 			pst.setString(16, dto.getLike_cnt());
 			pst.setString(17, dto.getGame_point());
-			pst.setInt(18, dto.getLike_type1());
-			pst.setInt(19, dto.getLike_type2());
-			pst.setInt(20, dto.getLike_type3());
-			pst.setInt(21, dto.getLike_type4());
-			pst.setString(22, dto.getMember_id());
+			pst.setString(18, dto.getMember_id());
 			pst.executeUpdate();
 		  } catch(SQLException e) {
 			  e.printStackTrace();
 		  }
 		}
+		
+	
 		
 		public MemberDTO getMemberData(String memberId) {
 
@@ -321,11 +319,7 @@ public class Member_tblDAO {
 		                rs.getString("weight"),
 		                rs.getString("love_type"),
 		                rs.getString("like_cnt"),
-		                rs.getString("game_point"),
-		                rs.getInt("like_type1"),
-		                rs.getInt("like_type2"),
-		                rs.getInt("like_type3"),
-		                rs.getInt("like_type4")
+		                rs.getString("game_point")
 				);
 				}
 			  } catch(SQLException e) {
@@ -335,9 +329,11 @@ public class Member_tblDAO {
 			}
 		
 		
+		
+		// matching 에 사람 정보 
 		public ArrayList<String> getMember_info(String member_id) {
 			
-			String sql = " select mname, age, introduce, mbti, religion, love_type from Member_tbl where member_id = ? ";
+			String sql = " select mname, age, introduce, mbti, religion, job, love_type from Member_tbl where member_id = ? ";
 			
 			ArrayList<String> getmemlist = new ArrayList<String>();
 			
@@ -355,6 +351,7 @@ public class Member_tblDAO {
 					getmemlist.add(rs.getString(4));
 					getmemlist.add(rs.getString(5));
 					getmemlist.add(rs.getString(6));
+					getmemlist.add(rs.getString(7));
 					
 				}
 				
@@ -366,7 +363,35 @@ public class Member_tblDAO {
 			
 		}
 		
-
+		// mypage 내정보 
+		public ArrayList<String> getMember_info2(String member_id) {
+			
+			String sql = " select mname, image, like_cnt, game_point from Member_tbl where member_id = ? ";
+			
+			ArrayList<String> getmemlist2 = new ArrayList<String>();
+			
+			try {
+				Connection con = dataSource.getConnection();
+				PreparedStatement pst = con.prepareStatement(sql);
+				pst.setString(1, member_id);
+				ResultSet rs = pst.executeQuery();
+				
+				if ( rs.next()) {
+					
+					getmemlist2.add(rs.getString(1));
+					getmemlist2.add(rs.getString(2));
+					getmemlist2.add(rs.getString(3));
+					getmemlist2.add(rs.getString(4));
+	
+				}
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return getmemlist2;
+			
+		}
 		
 	
 }
