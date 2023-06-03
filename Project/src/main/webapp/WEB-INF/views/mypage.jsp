@@ -15,7 +15,7 @@
         font-family: 'GmarketSansMedium';
     }
     section{
-        border: 3px solid rgb(119, 0, 255);
+        /*border: 3px solid rgb(119, 0, 255); */
         width: 100%;
         height: 800px;
     }
@@ -23,14 +23,15 @@
 
 
     #box {
-        border: 2px solid black;
+        /* border: 2px solid black; */
         display: flex;
         justify-content: center;
         gap: 100px;
+        margin-bottom: 25px;
     }
 
     #imgbox {
-        border: 1px solid red;
+        /* border: 1px solid red; */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -44,6 +45,11 @@
         width: 250px; 
         height: 250px; 
     }
+    span a:hover{
+    	opacity: 1;
+    	background-color: #ffd0cf;
+    	
+    }
     span a{
         text-decoration: none;
         color: white;
@@ -54,9 +60,10 @@
         border-radius: 30px;
         padding-left: 25px;
         padding-right: 25px;
+        
     }
     #info {
-        border: 2px solid blue;
+        /* border: 2px solid blue; */
         /* text-align: center; */
         font-size: 24px;
         width: 30%;
@@ -64,8 +71,9 @@
      /* ================================================================ */ 
 
     #test {
-        border: 2px solid violet;
+         /* border: 2px solid violet;*/
         /* text-align: center; */
+        
 
     }
     
@@ -76,18 +84,32 @@
             background-color: #e4e4e4;
             border-radius: 15px;
             overflow: hidden;
+            
     }
 
     /* Progress Bar Value */
     .progress-bar-value {
             height: 100%;
-            background-color: #ff00bb;
+            background: linear-gradient(270.67deg, rgba(255, 94, 229, 0.5) 5.26%, rgba(255, 94, 229, 0) 89.48%), #FF7979;
             width: 0;
             transition: width 0.3s ease-in-out;
+            
     }
 	.container{
-	display:flex;
-	align-items: center;
+			display:flex;
+			align-items: center;
+			margin-left: 50px;
+	}
+	
+	h1{
+		margin-left: 50px;
+	}
+	#bar p{
+		margin-left: 50px;
+		font-size: 18px;
+	}
+	hr{
+		width: 95%;
 	}
 
 </style>
@@ -117,8 +139,9 @@
 
         <div id="test">
             <h1> 내 첫인상 어때요? </h1>
-            <button> 평가 받으러 가기 </button>
         </div>
+
+		<hr>
 
         <div id="bar">
 
