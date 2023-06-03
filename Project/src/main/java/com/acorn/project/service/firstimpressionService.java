@@ -1,10 +1,12 @@
 package com.acorn.project.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.acorn.project.DAO.Member_tblDAO;
 import com.acorn.project.DAO.firstimpressionDAO;
 import com.acorn.project.DTO.firstimpressionChkDTO;
 import com.acorn.project.DTO.firstimpressionDTO;
@@ -14,6 +16,9 @@ public class firstimpressionService {
 	
 	@Autowired
 	firstimpressionDAO dao;
+	
+	@Autowired
+	Member_tblDAO memberdao;
 
 	public void setDao(firstimpressionDAO dao) {
 		this.dao = dao;
@@ -46,6 +51,12 @@ public class firstimpressionService {
 	public List<firstimpressionDTO> allMethod(String memberId){
 		List<firstimpressionDTO> list = dao.allmethod(memberId);
 		return list;
+	}
+	
+	// 
+	public ArrayList<String> getMember_info2(String member_id) {
+		ArrayList<String> getmember_info2 = memberdao.getMember_info2(member_id);
+		return getmember_info2;
 	}
 	
 //	public List<likeDTO> getAllUsers(){
