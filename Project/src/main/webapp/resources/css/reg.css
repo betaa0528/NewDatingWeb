@@ -111,16 +111,15 @@ input[type="submit"] {
   border-radius: 10px;
 }
 
-.preview_td{
-	display:none;
-}
 
 /* Styles for section */
 section {
   margin: 40px auto;
   width : 60vw;
 }
-
+#preview1{
+	margin-left : 2vw;
+}
 #preview1, #preview2, #preview3{
 	width : 5vw;
 	height: 12vh;
@@ -139,6 +138,8 @@ section {
 	display : none;
 	font-size: 12px;
 	margin-top: 5px;
+	margin-left : 30px;
+
 }
 /* 중복아이디 존재하는 경우 */
 .id_input_re_2, .email_input_re_2{
@@ -146,6 +147,7 @@ section {
     display : none;
     font-size: 12px;
 	margin-top: 5px;
+	margin-left : 30px;
 }
         
 #tr_like_cnt, #tr_game_point, #tr_grade_input, .tr_likeType_input{
