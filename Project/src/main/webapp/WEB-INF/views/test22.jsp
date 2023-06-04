@@ -215,8 +215,8 @@
     </div>
 
     <div id="btn">
-        <button id="nope" onclick="nope_action()"> NOPE <img src="resources/images/NO.png" width="35"></button>
-        <button id="like" onclick="like_action()"> LIKE <img src="resources/images/YES.png" width="35"></button>
+        <button id="nope" > NOPE <img src="resources/images/NO.png" width="35"></button>
+        <button id="like" > LIKE <img src="resources/images/YES.png" width="35"></button>
         <input type="hidden" name="cnt">
     </div>    
 </div>
@@ -227,27 +227,23 @@
         <table>
             <tr>
                 <td> 🤔 이름 / 나이 🤔 </td>
-                <td> ${memlist.get(0)} / ${memlist.get(1)} </td>
+                <td id="td1"> ${memlist.get(0)} / ${memlist.get(1)} </td>
             </tr>
             <tr>
                 <td> 💁 자기소개 💁</td>
-                <td> ${memlist.get(2)} </td>
+                <td id="td2"> ${memlist.get(2)} </td>
             </tr>
             <tr>
                 <td> 🤩 MBTI 🤩</td>
-                <td> ${memlist.get(3)} </td>
+                <td id="td3"> ${memlist.get(3)} </td>
             </tr>
             <tr>
                 <td> 👏 종교 👏</td>
-                <td> ${memlist.get(4)} </td>
-            </tr>
-            <tr>
-                <td> 💁‍♂️ 직업 💁‍♂️</td>
-                <td> ${memlist.get(5)} </td>
+                <td id="td4"> ${memlist.get(4)} </td>
             </tr>
             <tr>
                 <td> ❤️‍🔥 이상형 ❤️‍🔥</td>
-                <td> ${memlist.get(6)} </td>
+                <td id="td5"> ${memlist.get(5)} </td>
             </tr>
 
         </table>
@@ -309,15 +305,21 @@ let img3= document.querySelector("#img3");
 				
 				},
 				success: function (response){	//() 자리에 s가 들어옴
-					if(response==null){
+					if(response[0]==null){
 						alert("저런, 더이상 남은 이성이 없군요.");
 						location.href="/project/";
 					}else{
-						
-					img1.src= "/project/resources/images/"+response.image.split(',')[0].trim();
-					img2.src= "/project/resources/images/"+response.image.split(',')[1].trim();
-					img3.src= "/project/resources/images/"+response.image.split(',')[2].trim();
-					id = response.member_id;
+					
+					img1.src= "/project/resources/images/"+response[0].image.split(',')[0].trim();
+					img2.src= "/project/resources/images/"+response[0].image.split(',')[1].trim();
+					img3.src= "/project/resources/images/"+response[0].image.split(',')[2].trim();
+					id = response[0].member_id;
+					
+					document.querySelector("#td1").innerHTML= response[1][0];
+					document.querySelector("#td2").innerHTML= response[1][1];
+					document.querySelector("#td3").innerHTML= response[1][2];
+					document.querySelector("#td4").innerHTML= response[1][3];
+					document.querySelector("#td5").innerHTML= response[1][4];
 					}
 				},
 			error: function(err){
