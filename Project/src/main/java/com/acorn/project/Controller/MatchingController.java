@@ -69,8 +69,9 @@ public class MatchingController {
 	
 	@PostMapping( value="/test1" )
 	@ResponseBody
-	public ClickDTO A_match(@RequestParam String cnt, @RequestParam String receiver_member_id,
-			@RequestParam String matching_status ,HttpServletRequest request ,HttpServletResponse  response) {
+	public Object[] A_match(@RequestParam String cnt, @RequestParam String receiver_member_id,
+			@RequestParam String matching_status ,HttpServletRequest request ,HttpServletResponse  response,
+			Model model) {
 		
 				
 		response.setContentType("application/json;charset=UTF-8");
@@ -93,7 +94,10 @@ public class MatchingController {
 		
 		ClickDTO result4 = mt_service.no_mat_list(id);
 		
-		return result4;
+		ArrayList<String> memlist = mt_service.getMember_info(result4.getMember_id());
+		
+		
+		return new Object[] {result4,memlist};
 	}
 	
 }
