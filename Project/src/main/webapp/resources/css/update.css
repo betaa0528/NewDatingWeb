@@ -40,7 +40,7 @@ body {
 
 .image-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between; /* Add this line to evenly distribute the images */
 }
 
