@@ -114,13 +114,11 @@
          </div>
          
         <div class="form-field">
-        <label class="input-label">'like' 개수</label>
-        <input type="text" name="like_cnt" value="${member.like_cnt}" />
+        <input type="hidden" name="like_cnt" value="${member.like_cnt}" />
          </div>
          
         <div class="form-field">
-        <label class="input-label">게임 포인트</label>
-        <input type="text" name="game_point" value="${member.game_point}" />
+        <input type="hidden" name="game_point" value="${member.game_point}" />
          </div>
          
          <div class="like-field">
