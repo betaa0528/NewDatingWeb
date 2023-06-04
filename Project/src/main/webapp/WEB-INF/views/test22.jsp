@@ -315,11 +315,11 @@ let img3= document.querySelector("#img3");
 					img3.src= "/project/resources/images/"+response[0].image.split(',')[2].trim();
 					id = response[0].member_id;
 					
-					document.querySelector("#td1").innerHTML= response[1][0];
-					document.querySelector("#td2").innerHTML= response[1][1];
-					document.querySelector("#td3").innerHTML= response[1][2];
-					document.querySelector("#td4").innerHTML= response[1][3];
-					document.querySelector("#td5").innerHTML= response[1][4];
+					document.querySelector("#td1").innerHTML= response[1][0]+" / "+ response[1][1];
+					document.querySelector("#td2").innerHTML= response[1][2];
+					document.querySelector("#td3").innerHTML= response[1][3];
+					document.querySelector("#td4").innerHTML= response[1][4];
+					document.querySelector("#td5").innerHTML= response[1][5];
 					}
 				},
 			error: function(err){
