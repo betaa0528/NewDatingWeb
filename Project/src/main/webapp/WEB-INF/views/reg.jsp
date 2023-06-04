@@ -56,7 +56,7 @@
                    <td class="form-field">
                    	   <span class="title_span">성별</span>
                    	   <input type="radio" name="gender" value="M">남자 
-                   	   <input type="radio" name="gender" value="W">여자
+                   	   <input type="radio" name="gender" value="F">여자
                    </td>
                </tr>
                <tr>
