@@ -219,14 +219,14 @@
 		c4.innerHTML="0%";
 	}else{
 		
-	liketype1.style.width = (like1 / liketot * 100)+"%" ; 
-	c1.innerHTML= (like1 / liketot * 100)+"%";
-	liketype2.style.width = (like2 / liketot * 100)+"%" ; 
-	c2.innerHTML= (like2 / liketot * 100)+"%";
-	liketype3.style.width = (like3 / liketot * 100)+"%" ; 
-	c3.innerHTML= (like3 / liketot * 100)+"%";
-	liketype4.style.width = (like4 / liketot * 100)+"%" ; 
-	c4.innerHTML= (like4 / liketot * 100)+"%";
+	liketype1.style.width = Math.floor(like1 / liketot * 100)+"%" ; 
+	c1.innerHTML= Math.floor(like1 / liketot * 100)+"%";
+	liketype2.style.width = Math.floor(like2 / liketot * 100)+"%" ; 
+	c2.innerHTML= Math.floor(like2 / liketot * 100)+"%";
+	liketype3.style.width = Math.floor(like3 / liketot * 100)+"%" ; 
+	c3.innerHTML= Math.floor(like3 / liketot * 100)+"%";
+	liketype4.style.width = Math.floor(like4 / liketot * 100)+"%" ; 
+	c4.innerHTML= Math.floor(like4 / liketot * 100)+"%";
 	
 
 
