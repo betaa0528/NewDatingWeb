@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -63,12 +65,14 @@ public class memberJoinController {
 	
 	/* 첨부 파일 업로드 */
 	@PostMapping("/reg/uploadAjaxAction")
-	public void uploadAjaxActionPOST(MultipartFile[] uploadFile) {
+	public void uploadAjaxActionPOST(MultipartFile[] uploadFile, HttpServletRequest request) {
+		
+		
 		
 		logger.info("uploadAjaxActionPOST..........");
-		String uploadFolder = "C:/dating/upload";
+		String uploadFolder = request.getSession().getServletContext().getRealPath("/").concat("resources");
 	
-		String imgPath = "회원사진";
+		String imgPath = "images";
 		File uploadPath = new File(uploadFolder, imgPath);
 		
 		
