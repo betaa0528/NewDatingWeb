@@ -32,7 +32,7 @@
 	           	</c:if>
 	                <c:choose>
 		                <c:when test="${item.imgName != null}">
-		                	<img src="external/게시판사진/${item.imgName }" class="profile-avatar" alt="">
+		                	<img src="/project/resources/images/${item.imgName }" class="profile-avatar" alt="">
 		                </c:when>
 		                <c:when test="${item.imgName == null }">
 		                	<div class="noImg"></div>
