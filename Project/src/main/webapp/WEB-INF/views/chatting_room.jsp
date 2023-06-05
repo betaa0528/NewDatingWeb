@@ -300,10 +300,10 @@ let img2 = "${opponentInfo[1]}";
 		}else{
 			when="오전";
 		}
-		if(hour.trim().length==1){
+		if(hour<10){
 			hour = "0"+hour;
 		}
-		if(minutes.length==1){
+		if(minutes<10){
 			minutes = "0"+minutes;
 		}
 		
